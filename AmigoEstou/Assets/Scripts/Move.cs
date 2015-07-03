@@ -7,15 +7,12 @@ public class Move : MonoBehaviour {
 	public float jump = 0;
 	private float T;
 	public float Stamina = 100f;
-	public bool speedUp = false;
+	public bool speedUp = false; 
+	public AudioClip Fundo212;
+	public AudioClip HitMark;
 	
 	float rand;
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
 	//Equeleto Começo
@@ -67,5 +64,6 @@ public class Move : MonoBehaviour {
 		{
 			jump = 0;
 		}
+		GetComponent<AudioSource>().PlayOneShot(HitMark);
 	}
 }
